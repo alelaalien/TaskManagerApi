@@ -1,0 +1,17 @@
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\bin\Debug\net8.0\TaskManager.Infraestructure.deps.json
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\bin\Debug\net8.0\TaskManager.Infraestructure.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\bin\Debug\net8.0\TaskManager.Infraestructure.pdb
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\obj\Debug\net8.0\TaskManager.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\obj\Debug\net8.0\TaskManager.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\obj\Debug\net8.0\TaskManager.Infraestructure.AssemblyInfo.cs
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\obj\Debug\net8.0\TaskManager.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\obj\Debug\net8.0\TaskManager.Infraestructure.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\obj\Debug\net8.0\refint\TaskManager.Infraestructure.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\obj\Debug\net8.0\TaskManager.Infraestructure.pdb
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\obj\Debug\net8.0\ref\TaskManager.Infraestructure.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\bin\Debug\net8.0\TaskManager.Domain.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\bin\Debug\net8.0\TaskManager.Domain.pdb
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\obj\Debug\net8.0\TaskManager.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\obj\Debug\net8.0\TaskMana.84595F8D.Up2Date
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\bin\Debug\net8.0\TaskManager.Infraestructure.runtimeconfig.json
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Infraestructure\obj\Debug\net8.0\TaskManager.Infraestructure.genruntimeconfig.cache
