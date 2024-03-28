@@ -9,3 +9,4 @@ C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Domain\obj\Debug\
 C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\refint\TaskManager.Domain.dll
 C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.pdb
 C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\ref\TaskManager.Domain.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.sourcelink.json
