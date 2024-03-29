@@ -5,45 +5,45 @@ USE TaskManager;
 GO
 
 CREATE TABLE [User] (
-    UserId INT PRIMARY KEY,
-    Nick NVARCHAR(50) NOT NULL,
-    Email NVARCHAR(50) NOT NULL,
-    Pass NVARCHAR(MAX) NOT NULL
+    userId INT PRIMARY KEY,
+    nick NVARCHAR(50) NOT NULL,
+    email NVARCHAR(50) NOT NULL,
+    pass NVARCHAR(MAX) NOT NULL
 );
 GO
 
 CREATE TABLE Activity (
-    ActivityId INT PRIMARY KEY,
-    UserId INT FOREIGN KEY REFERENCES [User](UserId),
-    ItemStatus NVARCHAR(50) CHECK (ItemStatus IN ('pending', 'finished', 'cancelled')),
-    ItemPriority NVARCHAR(50) CHECK (ItemPriority IN ('low', 'medium', 'high', 'critical')),
-    Name NVARCHAR(50) NOT NULL,
-    Detail NVARCHAR(MAX),
-    Date DATETIME,
-    CreatedAt DATETIME DEFAULT GETDATE(),
-    UpdatedAt DATETIME,
+    activityId INT PRIMARY KEY,
+    userId INT FOREIGN KEY REFERENCES [User](UserId),
+    itemStatus NVARCHAR(50) CHECK (ItemStatus IN ('pending', 'finished', 'cancelled')),
+    itemPriority NVARCHAR(50) CHECK (ItemPriority IN ('low', 'medium', 'high', 'critical')),
+    name NVARCHAR(50) NOT NULL,
+    detail NVARCHAR(MAX),
+    date DATETIME,
+    createdAt DATETIME DEFAULT GETDATE(),
+    updatedAt DATETIME,
     CONSTRAINT FK_Activity_User FOREIGN KEY (UserId) REFERENCES [User](UserId)
 );
 GO
 CREATE TABLE Meet (
-    MeetId INT PRIMARY KEY,
-    UserId INT FOREIGN KEY REFERENCES [User](UserId),
-    Name NVARCHAR(50) NOT NULL,
-    ItemStatus NVARCHAR(50) CHECK (ItemStatus IN ('pending', 'finished', 'cancelled')),
-    ItemPriority NVARCHAR(50) CHECK (ItemPriority IN ('low', 'medium', 'high', 'critical')),
-    Detail NVARCHAR(300),
-    Description NVARCHAR(MAX),
-    MeetDate DATETIME NOT NULL,
-    CreatedAt DATETIME DEFAULT GETDATE(),
-    UpdatedAt DATETIME,
+    meetId INT PRIMARY KEY,
+    userId INT FOREIGN KEY REFERENCES [User](UserId),
+    name NVARCHAR(50) NOT NULL,
+    itemStatus NVARCHAR(50) CHECK (ItemStatus IN ('pending', 'finished', 'cancelled')),
+    itemPriority NVARCHAR(50) CHECK (ItemPriority IN ('low', 'medium', 'high', 'critical')),
+    detail NVARCHAR(300),
+    description NVARCHAR(MAX),
+    meetDate DATETIME NOT NULL,
+    createdAt DATETIME DEFAULT GETDATE(),
+    updatedAt DATETIME,
     CONSTRAINT FK_Meet_User FOREIGN KEY (UserId) REFERENCES [User](UserId)
 );
 GO
 CREATE TABLE SubTask (
-    SubTaskId INT PRIMARY KEY,
-    ActivityId INT FOREIGN KEY REFERENCES Activity(ActivityId),
-    Name NVARCHAR(500) NOT NULL,
-    Detail NVARCHAR(MAX),
+    subTaskId INT PRIMARY KEY,
+    activityId INT FOREIGN KEY REFERENCES Activity(ActivityId),
+    name NVARCHAR(500) NOT NULL,
+    detail NVARCHAR(MAX),
     CONSTRAINT FK_SubTask_Activity FOREIGN KEY (ActivityId) REFERENCES Activity(ActivityId)
 );
 GO

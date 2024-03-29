@@ -7,7 +7,7 @@ using TaskManager.Domain.Interfaces;
 namespace TaskManager.Presentation.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController] 
     public class ActivityController : ControllerBase
     {
         private IActivityRepository _repository;

@@ -1,4 +1,5 @@
 
+using TaskManager.Infraestructure.Filters;
 using TaskManager.Presentation.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddConfiguratedDBFromTheAppSettingStringConnection();
 builder.Services.AddSumary();
-
+builder.Services.AddMvc(options => options.Filters.Add<ValidatorFilter>());
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

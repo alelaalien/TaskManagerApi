@@ -10,3 +10,15 @@ C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Domain\obj\Debug\
 C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.pdb
 C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\ref\TaskManager.Domain.dll
 C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.sourcelink.json
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\bin\Debug\net8.0\TaskManager.Domain.deps.json
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\bin\Debug\net8.0\TaskManager.Domain.dll
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\bin\Debug\net8.0\TaskManager.Domain.pdb
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.AssemblyInfoInputs.cache
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.AssemblyInfo.cs
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.sourcelink.json
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.dll
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\refint\TaskManager.Domain.dll
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.pdb
+C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\ref\TaskManager.Domain.dll
