@@ -1,8 +1,8 @@
 ﻿
 
-using AutoMapper;
-using System.Diagnostics;
+using AutoMapper; 
 using TaskManager.Domain.DTOs;
+using TaskManager.Domain.Entities;
 
 namespace TaskManager.Infraestructure.Mapping
 {
@@ -11,7 +11,9 @@ namespace TaskManager.Infraestructure.Mapping
         public AutoMapperProfile()
         {
             CreateMap<Activity, ActivityDto>();
-            CreateMap<ActivityDto, Activity>();
+            CreateMap<ActivityDto,  Activity>();
+            CreateMap<User, UserDto>();
+            CreateMap<UserDto, User>();
 
         }
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Hlm635R30uCPAalT8KoKVFo275edq7C/nrywoadW1qIuOn9XHs58k0EBTR5+qLHhJgmDindCivXW5apdI7Cq+w==",
+  "dgSpecHash": "Zqcqgs3mhW3NbAXdWIeHsh/JVIInVtHM/E0mn5URJuIhuVBDk1wr+1QY4zdtPN9wajWLKjNqtQ83WydTmiWdzw==",
   "success": true,
   "projectFilePath": "C:\\Users\\camil\\source\\repos\\TaskManagerApi\\TaskManager.Infraestructure\\TaskManager.Infraestructure.csproj",
   "expectedPackageFiles": [

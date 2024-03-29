@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TaskManager.Domain.Entities;
 using TaskManager.Domain.Interfaces;
 using TaskManager.Infraestructure.Data;
@@ -18,7 +19,14 @@ namespace TaskManager.Infraestructure.Repositories
             var users = await _context.Users.ToListAsync();
             return users;
         }
+        public async Task Create(User user)
+        {
+               _context.Users.Add(user);
+            await _context.SaveChangesAsync();
 
-       
+             
+        }
+
+
     }
 }

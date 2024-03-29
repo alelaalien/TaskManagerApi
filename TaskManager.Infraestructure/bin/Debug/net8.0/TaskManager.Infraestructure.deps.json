@@ -509,6 +509,9 @@
       },
       "System.Threading.Channels/6.0.0": {},
       "TaskManager.Domain/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "13.0.1"
+        },
         "runtime": {
           "TaskManager.Domain.dll": {}
         }

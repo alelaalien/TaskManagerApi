@@ -40,7 +40,7 @@ namespace TaskManager.Presentation.Controllers
         {
             var activity = _mapper.Map<Activity>(activityDto); 
             await _repository.Create(activity);
-            return Ok(activity);
+            return Ok(activityDto);
         }
     }
 }

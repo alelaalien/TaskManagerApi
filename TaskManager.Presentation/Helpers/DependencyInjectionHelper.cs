@@ -8,6 +8,8 @@ namespace TaskManager.Presentation.Helpers
         public static void AddSumary(this IServiceCollection services)
         {
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IActivityRepository, ActivityRepository>();
+
         }
     }
 }

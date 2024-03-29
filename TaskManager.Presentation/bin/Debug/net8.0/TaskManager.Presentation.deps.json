@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.3",
           "Microsoft.Extensions.Configuration.Json": "8.0.0",
           "Swashbuckle.AspNetCore": "6.4.0",
+          "TaskManager.Domain": "1.0.0",
           "TaskManager.Infraestructure": "1.0.0"
         },
         "runtime": {
@@ -680,6 +681,9 @@
         }
       },
       "TaskManager.Domain/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "13.0.1"
+        },
         "runtime": {
           "TaskManager.Domain.dll": {}
         }

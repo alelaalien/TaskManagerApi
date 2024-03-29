@@ -44,6 +44,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -181,6 +187,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\camil\\source\\repos\\TaskManagerApi\\TaskManager.Domain\\TaskManager.Domain.csproj": {
+                "projectPath": "C:\\Users\\camil\\source\\repos\\TaskManagerApi\\TaskManager.Domain\\TaskManager.Domain.csproj"
+              },
               "C:\\Users\\camil\\source\\repos\\TaskManagerApi\\TaskManager.Infraestructure\\TaskManager.Infraestructure.csproj": {
                 "projectPath": "C:\\Users\\camil\\source\\repos\\TaskManagerApi\\TaskManager.Infraestructure\\TaskManager.Infraestructure.csproj"
               }

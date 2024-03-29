@@ -7,10 +7,10 @@ namespace TaskManager.Infraestructure.Data
 {
     public class ApiDbContext : DbContext
     {
-        public virtual DbSet<Activity> Activities { get; set; }
+        public   DbSet<Activity> Activities { get; set; }
         public  DbSet<User> Users { get; set; }
-        public virtual DbSet<Meet> Meets { get; set; }
-        public virtual DbSet<SubTask> SubTasks { get; set; }
+        public   DbSet<Meet> Meets { get; set; }
+        public   DbSet<SubTask> SubTasks { get; set; }
 
 
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
@@ -27,6 +27,9 @@ namespace TaskManager.Infraestructure.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<User>().ToTable("user", schema: "dbo");
+            modelBuilder.Entity<Activity>().ToTable("activity", schema: "dbo");
+             
+
 
         }
     }

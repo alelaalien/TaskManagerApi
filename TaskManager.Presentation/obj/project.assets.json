@@ -1335,6 +1335,9 @@
       "TaskManager.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AutoMapper": "13.0.1"
+        },
         "compile": {
           "bin/placeholder/TaskManager.Domain.dll": {}
         },
@@ -3859,6 +3862,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.3",
       "Microsoft.Extensions.Configuration.Json >= 8.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
+      "TaskManager.Domain >= 1.0.0",
       "TaskManager.Infraestructure >= 1.0.0"
     ]
   },
@@ -3895,6 +3899,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\camil\\source\\repos\\TaskManagerApi\\TaskManager.Domain\\TaskManager.Domain.csproj": {
+              "projectPath": "C:\\Users\\camil\\source\\repos\\TaskManagerApi\\TaskManager.Domain\\TaskManager.Domain.csproj"
+            },
             "C:\\Users\\camil\\source\\repos\\TaskManagerApi\\TaskManager.Infraestructure\\TaskManager.Infraestructure.csproj": {
               "projectPath": "C:\\Users\\camil\\source\\repos\\TaskManagerApi\\TaskManager.Infraestructure\\TaskManager.Infraestructure.csproj"
             }
