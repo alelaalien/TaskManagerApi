@@ -9,6 +9,6 @@ namespace TaskManager.Domain.Interfaces
         Task<Activity> GetById(int id);
         Task Create(Activity activity);
         Task<bool> Delete(int id);
-        Task<Activity> Update(Activity activity); 
+        Task<bool> Update(Activity activity); 
     }
 }

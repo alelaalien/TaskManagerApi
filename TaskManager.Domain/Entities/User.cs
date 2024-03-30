@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TaskManager.Domain.Entities
 {
-    public class User
+    public class User : BaseEntity
     {
-        public int UserId { get; set; }
+    
         public required string Nick { get; set; }
         public required string Email { get; set; }
         public required string Pass { get; set; }

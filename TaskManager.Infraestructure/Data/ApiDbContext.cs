@@ -27,8 +27,13 @@ namespace TaskManager.Infraestructure.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<User>().ToTable("user", schema: "dbo");
+            modelBuilder.Entity<User>().Property(e => e.Id)
+                                        .HasColumnName("userId");
+                 
             modelBuilder.Entity<Activity>().ToTable("activity", schema: "dbo");
-             
+            modelBuilder.Entity<Activity>().Property(e => e.Id)
+                                        .HasColumnName("activityId");
+
 
 
         }
