@@ -1,16 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TaskManager.Domain.Entities;
 using TaskManager.Domain.Interfaces;
 using TaskManager.Infraestructure.Data;
 
 namespace TaskManager.Infraestructure.Repositories
 {
-    public class BaseRepository<T> : IRepository<T> where T : BaseEntity
+    public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         private readonly ApiDbContext _context;
         private DbSet<T> _entities;
@@ -28,25 +23,26 @@ namespace TaskManager.Infraestructure.Repositories
 
         public async Task Delete(int id)
         {
-            var entity = await GetById(id);
-
-                _entities.Remove(entity);
+             var entity = await GetById(id);
+             _entities.Remove(entity);
              await _context.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<T>> GetAll()
+        public async Task<IEnumerable<T>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _entities.ToListAsync();
         }
 
-        public Task<T> GetById(int id)
+        public async Task<T> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await _entities.FindAsync(id);
         }
 
-        public Task Update(int id)
+        public async Task Update(T entity)
         {
-            throw new NotImplementedException();
+            entity.UpdatedAt = DateTime.Now;
+           _entities.Update(entity);
+           await _context.SaveChangesAsync();
         }
     }
 }

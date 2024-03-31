@@ -11,19 +11,19 @@ namespace TaskManager.Presentation.Controllers
     [ApiController] 
     public class ActivityController : ControllerBase
     {
-        private IActivityRepository _repository;
+        private IActivityService _service;
         private IMapper _mapper;
 
-        public ActivityController(IActivityRepository repository, IMapper mapper)
+        public ActivityController(IActivityService service, IMapper mapper)
         {
-            _repository = repository;
+            _service = service;
             _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetActivities()
         {
-            var activities = await _repository.GetAll();
+            var activities = await _service.GetAll();
             var activitiesDto = _mapper.Map<IEnumerable<ActivityDto>>(activities);
              
             var response = new ApiResponses<IEnumerable<ActivityDto>>(activitiesDto);
@@ -34,7 +34,7 @@ namespace TaskManager.Presentation.Controllers
         //api/activity/n
         public async Task<IActionResult> GetActivity(int id)
         {
-            var activity = await _repository.GetById(id);
+            var activity = await _service.GetById(id);
             var activityDto = _mapper.Map<ActivityDto>(activity);
             var response = new ApiResponses<ActivityDto>(activityDto);
             return Ok(response);
@@ -43,8 +43,10 @@ namespace TaskManager.Presentation.Controllers
         public async Task<IActionResult> CreateActivity(ActivityDto activityDto)
         {
             var activity = _mapper.Map<Activity>(activityDto); 
-            await _repository.Create(activity);
+            //activity.UpdatedAt = DateTime.Now;
+            await _service.Create(activity);
             var newActivityDto = _mapper.Map<ActivityDto>(activity);
+            newActivityDto.Id = activity.Id;
             var response = new ApiResponses<ActivityDto>(newActivityDto);
             return Ok(response);
         }
@@ -52,15 +54,15 @@ namespace TaskManager.Presentation.Controllers
         public async Task<IActionResult> UpdateActivity(int id, ActivityDto activityDto)
         {
             var activity = _mapper.Map<Activity>(activityDto);
-            activity.Id = id;
-            var result = await _repository.Update(activity);
+            activity.Id = id; 
+            var result = await _service.Update(activity);
             var response = new ApiResponses<bool>(result);
             return Ok(response);
         }
         [HttpDelete]
         public async Task<IActionResult> DeleteActivity(int id)
         { 
-            var result = await _repository.Delete(id);
+            var result = await _service.Delete(id);
             var response = new ApiResponses<bool>(result);
             return Ok(response);
         }

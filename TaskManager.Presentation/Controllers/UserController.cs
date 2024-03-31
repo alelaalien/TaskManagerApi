@@ -1,11 +1,9 @@
 ﻿
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 using TaskManager.Domain.DTOs;
 using TaskManager.Domain.Entities;
 using TaskManager.Domain.Interfaces;
-using TaskManager.Infraestructure.Repositories;
 
 namespace TaskManager.Presentation.Controllers
 {

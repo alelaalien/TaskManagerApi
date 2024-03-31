@@ -1,6 +1,7 @@
 ﻿
 
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using TaskManager.Domain.Entities; 
 
 namespace TaskManager.Infraestructure.Data
@@ -25,7 +26,27 @@ namespace TaskManager.Infraestructure.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             base.OnModelCreating(modelBuilder);
+
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                
+                if (typeof(BaseEntity).IsAssignableFrom(entityType.ClrType))
+                {
+                    modelBuilder.Entity(entityType.ClrType)
+                        .Property(nameof(BaseEntity.CreatedAt))
+                        .HasDefaultValueSql("GETDATE()")
+                        .ValueGeneratedOnAdd()
+                        .Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
+                    modelBuilder.Entity(entityType.ClrType)
+                       .Property(nameof(BaseEntity.UpdatedAt))
+                       .HasDefaultValueSql("GETDATE()")
+                       .ValueGeneratedOnAddOrUpdate()
+                       .Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Save);
+
+                }
+            }
             modelBuilder.Entity<User>().ToTable("user", schema: "dbo");
             modelBuilder.Entity<User>().Property(e => e.Id)
                                         .HasColumnName("userId");
@@ -33,6 +54,7 @@ namespace TaskManager.Infraestructure.Data
             modelBuilder.Entity<Activity>().ToTable("activity", schema: "dbo");
             modelBuilder.Entity<Activity>().Property(e => e.Id)
                                         .HasColumnName("activityId");
+           
 
 
 
