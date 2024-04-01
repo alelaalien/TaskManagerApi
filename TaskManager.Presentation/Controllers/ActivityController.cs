@@ -23,7 +23,7 @@ namespace TaskManager.Presentation.Controllers
         [HttpGet]
         public async Task<IActionResult> GetActivities()
         {
-            var activities = await _service.GetAll();
+            var activities =  _service.GetAll();
             var activitiesDto = _mapper.Map<IEnumerable<ActivityDto>>(activities);
              
             var response = new ApiResponses<IEnumerable<ActivityDto>>(activitiesDto);

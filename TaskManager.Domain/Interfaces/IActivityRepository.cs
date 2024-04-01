@@ -3,12 +3,13 @@ using TaskManager.Domain.Entities;
 
 namespace TaskManager.Domain.Interfaces
 {
-    public interface IActivityRepository
+    public interface IActivityRepository : IBaseRepository<Activity>
     {
-        Task<IEnumerable<Activity>> GetAll();
-        Task<Activity> GetById(int id);
-        Task Create(Activity activity);
-        Task<bool> Delete(int id);
-        Task<bool> Update(Activity activity); 
+        Task<IEnumerable<Activity>> GetAllByUserId(int userId);
+        //llevados al unit
+        //Task Create(Activity activity);
+        //Task<Activity> GetById(int id);
+        //Task<bool> Delete(int id);
+        //Task<bool> Update(Activity activity); 
     }
 }

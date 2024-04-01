@@ -4,10 +4,10 @@ namespace TaskManager.Domain.Interfaces
 {
     public interface IBaseRepository<T> where T : BaseEntity
     {
-        Task<IEnumerable<T>> GetAll();
+        IEnumerable<T> GetAll();
         Task<T> GetById(int id);
         Task Create(T entity);
         Task Delete(int id);
-        Task Update(T entity);
+        void Update(T entity);
     }
 }

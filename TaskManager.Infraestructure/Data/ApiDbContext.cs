@@ -48,13 +48,19 @@ namespace TaskManager.Infraestructure.Data
                 }
             }
             modelBuilder.Entity<User>().ToTable("user", schema: "dbo");
+           
             modelBuilder.Entity<User>().Property(e => e.Id)
                                         .HasColumnName("userId");
-                 
-            modelBuilder.Entity<Activity>().ToTable("activity", schema: "dbo");
-            modelBuilder.Entity<Activity>().Property(e => e.Id)
-                                        .HasColumnName("activityId");
-           
+
+            modelBuilder.Entity<Activity>()
+     .ToTable("activity", schema: "dbo")
+     .HasKey(e => e.Id); // Definir la clave primaria
+
+            modelBuilder.Entity<Activity>()
+                .Property(e => e.Id) // Especificar el tipo de la propiedad (int en este caso)
+                .HasColumnName("ActivityId")
+                .HasColumnType("int");
+
 
 
 

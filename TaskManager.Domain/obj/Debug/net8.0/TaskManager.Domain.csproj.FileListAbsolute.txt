@@ -23,3 +23,4 @@ C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\r
 C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.pdb
 C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\ref\TaskManager.Domain.dll
 C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.csproj.AssemblyReference.cache
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Domain\obj\Debug\net8.0\TaskManager.Domain.csproj.AssemblyReference.cache

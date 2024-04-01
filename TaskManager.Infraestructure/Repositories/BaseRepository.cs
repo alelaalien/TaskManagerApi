@@ -8,7 +8,7 @@ namespace TaskManager.Infraestructure.Repositories
     public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         private readonly ApiDbContext _context;
-        private DbSet<T> _entities;
+        protected DbSet<T> _entities;
 
         public BaseRepository(ApiDbContext context)
         {
@@ -17,20 +17,20 @@ namespace TaskManager.Infraestructure.Repositories
         }
         public async Task Create(T entity)
         {
-            _context.Add(entity);
-            await _context.SaveChangesAsync();
+           await _context.AddAsync(entity);
+          //  await _context.SaveChangesAsync();
         }
 
         public async Task Delete(int id)
         {
              var entity = await GetById(id);
              _entities.Remove(entity);
-             await _context.SaveChangesAsync();
+           //  await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAll()
+        public   IEnumerable<T>  GetAll()
         {
-            return await _entities.ToListAsync();
+            return   _entities.AsEnumerable();
         }
 
         public async Task<T> GetById(int id)
@@ -38,11 +38,11 @@ namespace TaskManager.Infraestructure.Repositories
             return await _entities.FindAsync(id);
         }
 
-        public async Task Update(T entity)
+        public  void Update(T entity)
         {
             entity.UpdatedAt = DateTime.Now;
            _entities.Update(entity);
-           await _context.SaveChangesAsync();
+         //  await _context.SaveChangesAsync();
         }
     }
 }

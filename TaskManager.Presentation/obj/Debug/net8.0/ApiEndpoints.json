@@ -1,76 +1,34 @@
 [
   {
     "ContainingType": "TaskManager.Presentation.Controllers.ActivityController",
-    "Method": "Get",
+    "Method": "GetActivities",
     "RelativePath": "api/Activity",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "TaskManager.Presentation.Controllers.ActivityController",
-    "Method": "Post",
+    "Method": "CreateActivity",
     "RelativePath": "api/Activity",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "value",
-        "Type": "System.String",
+        "Name": "activityDto",
+        "Type": "TaskManager.Domain.DTOs.ActivityDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "TaskManager.Presentation.Controllers.ActivityController",
-    "Method": "Get",
-    "RelativePath": "api/Activity/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "TaskManager.Presentation.Controllers.ActivityController",
-    "Method": "Put",
-    "RelativePath": "api/Activity/{id}",
+    "Method": "UpdateActivity",
+    "RelativePath": "api/Activity",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -78,27 +36,37 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
-        "Name": "value",
-        "Type": "System.String",
+        "Name": "activityDto",
+        "Type": "TaskManager.Domain.DTOs.ActivityDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "TaskManager.Presentation.Controllers.ActivityController",
-    "Method": "Delete",
-    "RelativePath": "api/Activity/{id}",
+    "Method": "DeleteActivity",
+    "RelativePath": "api/Activity",
     "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManager.Presentation.Controllers.ActivityController",
+    "Method": "GetActivity",
+    "RelativePath": "api/Activity/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -108,13 +76,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "TaskManager.Presentation.Controllers.UserController",
@@ -124,6 +86,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManager.Presentation.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "TaskManager.Domain.Entities.User",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

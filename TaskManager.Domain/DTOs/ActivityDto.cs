@@ -7,7 +7,6 @@ namespace TaskManager.Domain.DTOs
     {
         public int Id { get; set; }
         public int UserId { get; set; }
-     
         public string Name { get; set; }
         public string?  Detail { get; set; }
         public DateTime?  Date { get; set; }

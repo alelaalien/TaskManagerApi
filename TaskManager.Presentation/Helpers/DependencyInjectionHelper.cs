@@ -13,6 +13,7 @@ namespace TaskManager.Presentation.Helpers
             //services.AddTransient<IActivityRepository, ActivityRepository>();
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddTransient<IActivityService, ActivityService>(); 
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
         }
     }
 }

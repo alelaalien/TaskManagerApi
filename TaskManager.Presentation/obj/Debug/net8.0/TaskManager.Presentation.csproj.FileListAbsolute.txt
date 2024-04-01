@@ -235,3 +235,6 @@ C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Presentation\obj\Debug\ne
 C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Presentation\obj\Debug\net8.0\TaskManager.Presentation.pdb
 C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Presentation\obj\Debug\net8.0\TaskManager.Presentation.genruntimeconfig.cache
 C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Presentation\obj\Debug\net8.0\ref\TaskManager.Presentation.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
