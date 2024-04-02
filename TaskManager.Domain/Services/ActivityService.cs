@@ -1,5 +1,6 @@
 ﻿using TaskManager.Domain.Entities;
 using TaskManager.Domain.Interfaces;
+using TaskManager.Domain.QueryFilters;
 
 namespace TaskManager.Domain.Services
 {
@@ -26,10 +27,41 @@ namespace TaskManager.Domain.Services
             return true;
         }
 
-        public IEnumerable<Activity> GetAll()
+        public IEnumerable<Activity> GetAll(ActivityQueryFilter filter)
         {
-            return  _unitOfWork.ActivityRespository.GetAll();
+            var activities =  _unitOfWork.ActivityRespository.GetAll();
+
+            if (filter.UserId != null)
+            {
+                activities = activities.Where(x => x.UserId == filter.UserId);
+            }
+
+            if(filter.Detail != null)
+            {
+                activities = activities.Where(x => x.Detail.ToLower().Contains(filter.Detail.ToLower()));
+            }
+             
+            if (filter.CreatedOrUpdatedAt.HasValue)
+            {
+                activities = activities.Where(x =>
+
+                    (x.CreatedAt.HasValue ?
+                         x.CreatedAt.Value.ToShortDateString() == filter.CreatedOrUpdatedAt.Value.ToShortDateString() : true)
+                         ||
+                    (x.UpdatedAt.HasValue ?
+                         x.UpdatedAt.Value.ToShortDateString() == filter.CreatedOrUpdatedAt.Value.ToShortDateString(): true)
+
+                ); 
+            }
+            if(filter.Date.HasValue) activities = activities.Where(x =>
+                    
+                    x.Date.HasValue ? x.Date.Value.ToShortDateString() == filter.Date.Value.ToShortDateString() : true
+                    );
+            
+            return activities;
+             
         }
+            
 
         public async Task<Activity> GetById(int id)
         {

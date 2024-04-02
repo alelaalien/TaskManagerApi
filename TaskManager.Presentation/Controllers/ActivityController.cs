@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TaskManager.Domain.DTOs;
 using TaskManager.Domain.Entities;
 using TaskManager.Domain.Interfaces;
+using TaskManager.Domain.QueryFilters;
 using TaskManager.Presentation.Responses;
 
 namespace TaskManager.Presentation.Controllers
@@ -21,11 +22,10 @@ namespace TaskManager.Presentation.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetActivities()
+        public IActionResult GetActivities([FromQuery]ActivityQueryFilter filter)
         {
-            var activities =  _service.GetAll();
+            var activities =  _service.GetAll(filter);
             var activitiesDto = _mapper.Map<IEnumerable<ActivityDto>>(activities);
-             
             var response = new ApiResponses<IEnumerable<ActivityDto>>(activitiesDto);
             return Ok(response);
         }
