@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 var mapper = typeof(AutoMapperProfile).Assembly;
 builder.Services.AddAutoMapper(mapper);
 
-builder.Services.AddControllers()
+builder.Services.AddControllers(options => options.Filters.Add<GlobalExceptions>())
                 .AddNewtonsoftJson(
                             options => options.SerializerSettings
                             .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
