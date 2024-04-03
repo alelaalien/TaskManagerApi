@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D757FAB3-D4D1-4A9C-A452-85AF61C98FED}|TaskManager.Domain\\TaskManager.Domain.csproj|c:\\users\\ale\\documents\\ale\\projects\\taskmanagerapi\\taskmanager.domain\\queryfilters\\activityqueryfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D757FAB3-D4D1-4A9C-A452-85AF61C98FED}|TaskManager.Domain\\TaskManager.Domain.csproj|solutionrelative:taskmanager.domain\\queryfilters\\activityqueryfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D757FAB3-D4D1-4A9C-A452-85AF61C98FED}|TaskManager.Domain\\TaskManager.Domain.csproj|c:\\users\\ale\\documents\\ale\\projects\\taskmanagerapi\\taskmanager.domain\\services\\activityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D757FAB3-D4D1-4A9C-A452-85AF61C98FED}|TaskManager.Domain\\TaskManager.Domain.csproj|solutionrelative:taskmanager.domain\\services\\activityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4774A729-0A55-48F6-9FBC-8B55F358A7A6}|TaskManager.Presentation\\TaskManager.Presentation.csproj|c:\\users\\ale\\documents\\ale\\projects\\taskmanagerapi\\taskmanager.presentation\\controllers\\activitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4774A729-0A55-48F6-9FBC-8B55F358A7A6}|TaskManager.Presentation\\TaskManager.Presentation.csproj|solutionrelative:taskmanager.presentation\\controllers\\activitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4774A729-0A55-48F6-9FBC-8B55F358A7A6}|TaskManager.Presentation\\TaskManager.Presentation.csproj|c:\\users\\ale\\documents\\ale\\projects\\taskmanagerapi\\taskmanager.presentation\\responses\\apiresponses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4774A729-0A55-48F6-9FBC-8B55F358A7A6}|TaskManager.Presentation\\TaskManager.Presentation.csproj|solutionrelative:taskmanager.presentation\\responses\\apiresponses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D757FAB3-D4D1-4A9C-A452-85AF61C98FED}|TaskManager.Domain\\TaskManager.Domain.csproj|c:\\users\\ale\\documents\\ale\\projects\\taskmanagerapi\\taskmanager.domain\\interfaces\\iactivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D757FAB3-D4D1-4A9C-A452-85AF61C98FED}|TaskManager.Domain\\TaskManager.Domain.csproj|solutionrelative:taskmanager.domain\\interfaces\\iactivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4774A729-0A55-48F6-9FBC-8B55F358A7A6}|TaskManager.Presentation\\TaskManager.Presentation.csproj|c:\\users\\ale\\documents\\ale\\projects\\taskmanagerapi\\taskmanager.presentation\\controllers\\activitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4774A729-0A55-48F6-9FBC-8B55F358A7A6}|TaskManager.Presentation\\TaskManager.Presentation.csproj|solutionrelative:taskmanager.presentation\\controllers\\activitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D757FAB3-D4D1-4A9C-A452-85AF61C98FED}|TaskManager.Domain\\TaskManager.Domain.csproj|c:\\users\\ale\\documents\\ale\\projects\\taskmanagerapi\\taskmanager.domain\\customentities\\pagedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D757FAB3-D4D1-4A9C-A452-85AF61C98FED}|TaskManager.Domain\\TaskManager.Domain.csproj|solutionrelative:taskmanager.domain\\customentities\\pagedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IActivityService.cs",
-              "DocumentMoniker": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Domain\\Interfaces\\IActivityService.cs",
-              "RelativeDocumentMoniker": "TaskManager.Domain\\Interfaces\\IActivityService.cs",
-              "ToolTip": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Domain\\Interfaces\\IActivityService.cs",
-              "RelativeToolTip": "TaskManager.Domain\\Interfaces\\IActivityService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Title": "ApiResponses.cs",
+              "DocumentMoniker": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Presentation\\Responses\\ApiResponses.cs",
+              "RelativeDocumentMoniker": "TaskManager.Presentation\\Responses\\ApiResponses.cs",
+              "ToolTip": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Presentation\\Responses\\ApiResponses.cs",
+              "RelativeToolTip": "TaskManager.Presentation\\Responses\\ApiResponses.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T20:06:15.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ActivityQueryFilter.cs",
-              "DocumentMoniker": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Domain\\QueryFilters\\ActivityQueryFilter.cs",
-              "RelativeDocumentMoniker": "TaskManager.Domain\\QueryFilters\\ActivityQueryFilter.cs",
-              "ToolTip": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Domain\\QueryFilters\\ActivityQueryFilter.cs",
-              "RelativeToolTip": "TaskManager.Domain\\QueryFilters\\ActivityQueryFilter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T19:54:46.204Z",
+              "WhenOpened": "2024-04-03T20:28:10.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ActivityController.cs",
-              "DocumentMoniker": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Presentation\\Controllers\\ActivityController.cs",
-              "RelativeDocumentMoniker": "TaskManager.Presentation\\Controllers\\ActivityController.cs",
-              "ToolTip": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Presentation\\Controllers\\ActivityController.cs",
-              "RelativeToolTip": "TaskManager.Presentation\\Controllers\\ActivityController.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAAA4AAAAgAAAA",
+              "Title": "IActivityService.cs",
+              "DocumentMoniker": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Domain\\Interfaces\\IActivityService.cs",
+              "RelativeDocumentMoniker": "TaskManager.Domain\\Interfaces\\IActivityService.cs",
+              "ToolTip": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Domain\\Interfaces\\IActivityService.cs",
+              "RelativeToolTip": "TaskManager.Domain\\Interfaces\\IActivityService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T19:51:38.877Z",
+              "WhenOpened": "2024-04-03T20:18:46.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PagedList.cs",
+              "DocumentMoniker": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Domain\\CustomEntities\\PagedList.cs",
+              "RelativeDocumentMoniker": "TaskManager.Domain\\CustomEntities\\PagedList.cs",
+              "ToolTip": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Domain\\CustomEntities\\PagedList.cs",
+              "RelativeToolTip": "TaskManager.Domain\\CustomEntities\\PagedList.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwAcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T20:05:03.999Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ActivityController.cs",
+              "DocumentMoniker": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Presentation\\Controllers\\ActivityController.cs",
+              "RelativeDocumentMoniker": "TaskManager.Presentation\\Controllers\\ActivityController.cs",
+              "ToolTip": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Presentation\\Controllers\\ActivityController.cs",
+              "RelativeToolTip": "TaskManager.Presentation\\Controllers\\ActivityController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T17:48:22.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ActivityService.cs",
               "DocumentMoniker": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Domain\\Services\\ActivityService.cs",
               "RelativeDocumentMoniker": "TaskManager.Domain\\Services\\ActivityService.cs",
               "ToolTip": "C:\\Users\\Ale\\Documents\\Ale\\Projects\\TaskManagerApi\\TaskManager.Domain\\Services\\ActivityService.cs",
               "RelativeToolTip": "TaskManager.Domain\\Services\\ActivityService.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAowB0AAABGAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowCIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T19:51:12.823Z",
+              "WhenOpened": "2024-04-03T20:08:26.749Z",
               "EditorCaption": ""
             }
           ]

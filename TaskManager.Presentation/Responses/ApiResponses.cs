@@ -1,4 +1,6 @@
-﻿namespace TaskManager.Presentation.Responses
+﻿using TaskManager.Domain.CustomEntities;
+
+namespace TaskManager.Presentation.Responses
 {
     public class ApiResponses<T>
     {
@@ -7,5 +9,6 @@
             Data = data;
         }
         public T Data { get; set; }
+        public Metadata Metadata { get; set; }
     }
 }

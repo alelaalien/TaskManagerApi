@@ -11,9 +11,12 @@ var mapper = typeof(AutoMapperProfile).Assembly;
 builder.Services.AddAutoMapper(mapper);
 
 builder.Services.AddControllers(options => options.Filters.Add<GlobalExceptions>())
-                .AddNewtonsoftJson(
-                            options => options.SerializerSettings
-                            .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+                .AddNewtonsoftJson(options =>
+                    { options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                      options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+                    });
+                    
+                            
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddConfiguratedDBFromTheAppSettingStringConnection();

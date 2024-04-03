@@ -2,6 +2,7 @@
 {
     public class ActivityQueryFilter : Commonfilters
     {
-        public string? Detail { get; set; }
+        public string? DetailOrName { get; set; }
+
     }
 }

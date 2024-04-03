@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using TaskManager.Domain.CustomEntities;
 using TaskManager.Domain.DTOs;
 using TaskManager.Domain.Entities;
 using TaskManager.Domain.Interfaces;
@@ -24,9 +25,25 @@ namespace TaskManager.Presentation.Controllers
         [HttpGet]
         public IActionResult GetActivities([FromQuery]ActivityQueryFilter filter)
         {
-            var activities =  _service.GetAll(filter);
+            var activities =  _service.GetAll(filter); 
             var activitiesDto = _mapper.Map<IEnumerable<ActivityDto>>(activities);
-            var response = new ApiResponses<IEnumerable<ActivityDto>>(activitiesDto);
+
+            var metadata = new Metadata
+            {
+                TotalCount      = activities.TotalCount,
+                TotalPages      = activities.TotalPages,
+                CurrentPage     = activities.CurrentPage,
+                HasNextPage     = activities.HasNextPage,
+                HasPreviousPage = activities.HasPreviousPage,
+                PageNumber      = activities.PageNumber,
+                PageSize        = activities.PageSize
+
+            };
+            var response = new ApiResponses<IEnumerable<ActivityDto>>(activitiesDto) 
+            {
+                Metadata = metadata
+            };
+       
             return Ok(response);
         }
 
