@@ -1,4 +1,6 @@
-﻿using TaskManager.Domain.CustomEntities;
+﻿using Microsoft.Extensions.Options;
+using TaskManager.Domain.CustomEntities;
+using TaskManager.Domain.CustomEntities.Options;
 using TaskManager.Domain.Entities;
 using TaskManager.Domain.Interfaces;
 using TaskManager.Domain.QueryFilters;
@@ -10,11 +12,13 @@ namespace TaskManager.Domain.Services
     {
         //private readonly IActivityRepository _repository;
         private readonly IUnitOfWork _unitOfWork; // IBaseRepository<Activity> _repository; 
+        private readonly PaginationOptions _paginationOptions;
         //Agregar las interfaces de servicios necesarios aqui utilizando la expresion anterior
         //en caso de que la entidad herede de baseEntity :)
-        public ActivityService(IUnitOfWork unitOfWork)
+        public ActivityService(IUnitOfWork unitOfWork, IOptions<PaginationOptions> options)
         {
             _unitOfWork = unitOfWork;
+            _paginationOptions = options.Value;
         }
 
         public async Task Create(Activity activity)
@@ -33,6 +37,10 @@ namespace TaskManager.Domain.Services
 
         public PagedList<Activity> GetAll(ActivityQueryFilter filter)
         {
+            filter.PageNumber = filter.PageNumber == 0 ?  _paginationOptions.DefaultPageNumber : filter.PageNumber ;
+            filter.PageSize = filter.PageSize == 0 ? _paginationOptions.DefaultPageSize : filter.PageSize;
+
+
             var activities =  _unitOfWork.ActivityRespository.GetAll();
 
             if (filter.UserId != null)

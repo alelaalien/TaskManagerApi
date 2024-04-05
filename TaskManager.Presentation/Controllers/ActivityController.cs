@@ -1,28 +1,35 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using TaskManager.Domain.CustomEntities;
 using TaskManager.Domain.DTOs;
 using TaskManager.Domain.Entities;
 using TaskManager.Domain.Interfaces;
 using TaskManager.Domain.QueryFilters;
+using TaskManager.Infraestructure.Interfaces;
 using TaskManager.Presentation.Responses;
 
 namespace TaskManager.Presentation.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
-    [ApiController] 
+    [ApiController]
     public class ActivityController : ControllerBase
     {
         private IActivityService _service;
         private IMapper _mapper;
+        private IUriService _uri;
 
-        public ActivityController(IActivityService service, IMapper mapper)
+        public ActivityController(IActivityService service, IMapper mapper, IUriService uri)
         {
             _service = service;
             _mapper = mapper;
+            _uri = uri;
         }
 
-        [HttpGet]
+        [HttpGet(Name = nameof(GetActivities))]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ApiResponses<IEnumerable<ActivityDto>>))]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public IActionResult GetActivities([FromQuery]ActivityQueryFilter filter)
         {
             var activities =  _service.GetAll(filter); 
@@ -30,13 +37,15 @@ namespace TaskManager.Presentation.Controllers
 
             var metadata = new Metadata
             {
-                TotalCount      = activities.TotalCount,
-                TotalPages      = activities.TotalPages,
-                CurrentPage     = activities.CurrentPage,
-                HasNextPage     = activities.HasNextPage,
+                TotalCount = activities.TotalCount,
+                TotalPages = activities.TotalPages,
+                CurrentPage = activities.CurrentPage,
+                HasNextPage = activities.HasNextPage,
                 HasPreviousPage = activities.HasPreviousPage,
-                PageNumber      = activities.PageNumber,
-                PageSize        = activities.PageSize
+                PageNumber = activities.PageNumber,
+                PageSize = activities.PageSize,
+               // NextPageUrl = _uri.GestActivitiesPaginationUri(filter, nameof(GetActivities)).ToString(),
+                //PreviousPageUrl = _uri.GestActivitiesPaginationUri(filter, nameof(GetActivities)).ToString()
 
             };
             var response = new ApiResponses<IEnumerable<ActivityDto>>(activitiesDto) 
@@ -46,7 +55,11 @@ namespace TaskManager.Presentation.Controllers
        
             return Ok(response);
         }
-
+        /// <summary>
+        /// Return a specific activity by its id
+        /// </summary>
+        /// <param name="id"> int id </param>
+        /// <returns>Activity object</returns>
         [HttpGet("{id}")]
         //api/activity/n
         public async Task<IActionResult> GetActivity(int id)

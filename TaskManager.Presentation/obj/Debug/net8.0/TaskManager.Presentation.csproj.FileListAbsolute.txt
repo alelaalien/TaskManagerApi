@@ -238,3 +238,10 @@ C:\Users\camil\source\repos\TaskManagerApi\TaskManager.Presentation\obj\Debug\ne
 C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\Namotion.Reflection.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\NJsonSchema.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\NJsonSchema.Annotations.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\NSwag.Core.dll
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\SwaggerJson.json
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\bin\Debug\net8.0\TaskManager.Presentation.xml
+C:\Users\Ale\Documents\Ale\Projects\TaskManagerApi\TaskManager.Presentation\obj\Debug\net8.0\TaskManager.Presentation.xml
